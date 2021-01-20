@@ -1,6 +1,6 @@
 # fileuploadutility
 file upload functionality in react
-This project contain code for file uplaod and reporting utility
+This project contain code for file upload and reporting utility
 
 framework
 react
