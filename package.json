@@ -1,0 +1,30 @@
+{
+   "name": "auto24-test",
+   "version": "1.0.0",
+   "description": "code assignment for auto34",
+   "main": "index.js",
+   "scripts": {
+      "start": "node server.js",
+      "server": "nodemon server.js"
+   },
+   "author": "shikha",
+   "license": "ISC",
+   "dependencies": {
+      "axios": "^0.21.1",
+      "cors": "^2.8.5",
+      "data-forge": "^1.8.15",
+      "data-forge-fs": "0.0.9",
+      "express": "^4.17.1",
+      "multer": "^1.4.2",
+      "nodemon": "^2.0.7",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "react-table": "^7.6.3",
+      "react-table-6": "^6.11.0"
+   },
+   "devDependencies": {
+      "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
+      "enzyme": "^3.11.0",
+      "jest": "^26.6.0"
+   }
+}
