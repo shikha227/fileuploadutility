@@ -6,8 +6,8 @@ const cors = require('cors');
 const app = express();
 app.use(cors())
 // Bodyparser middleware
-const upload = require("./routes/api/fileuploader");
- app.use("/api", upload);    
+const fileuploader = require("./routes/api/fileuploader");
+ app.use("/api", fileuploader.router);    
 
 
 // DB Config

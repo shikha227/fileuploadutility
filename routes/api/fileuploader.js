@@ -20,7 +20,23 @@ var upload = multer({ storage: storage })
 router.post('/upload', upload.single('statement'), (req, res) => {
     console.log(`new upload = ${req.file.filename}\n`);
 
-    const dealersData = dataForge.readFileSync("./uploads/listings.csv").parseCSV().parseInts("price");   
+
+    var result=get_average_data(path="./uploads/listings.csv")
+
+     ;// Series -> dataframe.
+    // Convert to regular JS array.
+  
+                                           
+     
+
+    res.json({ response: result });
+
+});
+
+
+ 
+function get_average_data(path){
+     const dealersData = dataForge.readFileSync(path).parseCSV().parseInts("price");   
 
 
     const summarized = dealersData
@@ -32,19 +48,12 @@ router.post('/upload', upload.single('statement'), (req, res) => {
     .inflate() ;// Series -> dataframe.
     // Convert to regular JS array.
   
-                                           
-    var asJSArray = summarized.toArray();
+    console.log("inside average data method")                                         
+    const asJSArray = summarized.toArray();
     console.log(asJSArray);
+    return asJSArray
 
-    res.json({ response: asJSArray });
-
-});
-
-function sum(a, b) {
-  return a + b;
 }
-
  
-exports.sum = sum;
 
-module.exports=router;
+module.exports={router,get_average_data};
