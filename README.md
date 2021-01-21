@@ -9,7 +9,7 @@ framework used:
   - enjyme
 
 project structure
-root folder 
+root folder: 
   - server :node js code
   - client folder :react code
 
